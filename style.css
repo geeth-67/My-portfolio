@@ -1,0 +1,99 @@
+body {
+    scroll-behavior: smooth;
+    background-color: #0d0d0d;
+    color: rgb(255, 255, 255);
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #001f3f, #3c2b48);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero img {
+    width: 280px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.neon-btn {
+    background: #00eaff;
+    color: black;
+    padding: 12px 35px;
+    border-radius: 40px;
+    font-weight: bold;
+    border: none;
+    transition: 0.3s;
+}
+
+.neon-btn:hover {
+    box-shadow: 0 0 15px #00eaff;
+    transform: translateY(-3px);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    transition: 0.3s;
+}
+.social-link{
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+    animation-name:glow;
+    animation-duration:1s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    color:rgb(255, 255, 255);
+}
+@keyframes glow{
+  from{text-shadow:0px 0px 5px #020202,0px 0px 5px #2f2f32;}
+  to{text-shadow:0px 0px 20px #fff,0px 0px 20px #050505;}
+}
+.effect-img{
+    border-radius: 10px;
+}
+.effect-img:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+bt-n:active::before{
+    animation: layer 6s ease-in-out forwards;
+}
+@keyframes layer{
+    100%{
+        left : 0%;
+    }
+}
+.bt-n .content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    transition-delay: 0.2s;
+}
+.bt-n .active .content{
+    transform: translateY(60px);
+}
+.bt-n .content i ,
+.bt-n .content .bt-n-text{
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+}
+.bt-n .content .bt-n-text{
+    font-size: 15px;
+    margin-left: 8px;
+}
